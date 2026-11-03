@@ -1,5 +1,7 @@
 # PCA on random 3D data, with the 3 principal components drawn as 3D vectors
-#pak::pkg_install(c("MASS"))   # run once if needed
+#options(repos = c(CRAN = "https://cloud.r-project.org"))
+#install.packages("pak", dependencies=TRUE)
+#pak::pkg_install(c("MASS", "plotly"))   # run once if needed
 
 library(plotly)
 library(MASS)
@@ -7,6 +9,7 @@ library(MASS)
 set.seed(42)
 
 # ---- 1. Random correlated 3D data -------------------------------------------
+# Change this section based on data collected from survey
 n     <- 300
 Sigma <- matrix(c(4.0, 2.4, 1.2,
                   2.4, 3.0, 0.9,
@@ -27,7 +30,10 @@ pc_cols   <- c("#e41a1c", "#377eb8", "#4daf4a")
 var_expl  <- round(100 * pca$sdev^2 / sum(pca$sdev^2), 1)
 pc_names  <- paste0("PC", 1:3, " (", var_expl, "%)")
 
-# ---- 3. Interactive 3D plot -------------------------------------------------
+# ---- 3. Interactive plot -------------------------------------------------
+# This can only be visualized in 2d or 3d 
+# Our data has more than 3 dimensions so the code below may not work
+
 fig <- plot_ly() |>
   add_markers(x = X[, 1], y = X[, 2], z = X[, 3],
               marker = list(size = 3, color = "grey50", opacity = 0.5),
