@@ -1,9 +1,9 @@
 # PCA
 
-# Download R
+## Download R
 First, download R for your OS from one of the mirrors within https://cran.r-project.org/mirrors.html
 
-# Using R Console
+## Using R Console
 First add pca.r to your directory 
 
 Run R Console using this command:
