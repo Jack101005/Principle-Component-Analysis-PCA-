@@ -1,0 +1,7 @@
+"Metric","Value"
+"Accuracy",0.67741935483871
+"Precision (Yes)",0.666666666666667
+"Recall / Sensitivity (Yes)",0.823529411764706
+"Specificity (No)",0.5
+"F1-score (Yes)",0.736842105263158
+"ROC-AUC",0.701680672268908
